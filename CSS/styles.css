@@ -137,20 +137,30 @@ body.dark-mode {
 }
 
 .light-mode #modeSwitch .fa-sun {
-  color: var(--text-color-dark);
-  display: none; /* Set sun icon color in light mode */
+  color: var(--text-color-light); 
+  display: inline-block;
+  /* display: none; */
+   /* Set sun icon color in light mode */
 }
+
 
 .light-mode #modeSwitch .fa-moon {
-  display: none; /* Hide moon icon in light mode */
+  color: var(--text-color-dark); 
+  display: inline-block; /* Display moon icon in light mode */
+  /* display: none; */
+  /* Hide moon icon in light mode */
 }
-
 .dark-mode #modeSwitch .fa-moon {
-  color: var(--text-color-light); /* Set moon icon color in dark mode */
+  display: none; /* Hide moon icon in dark mode */
+  /* color: var(--text-color-light); */
+   /* Set moon icon color in dark mode */
 }
 
 .dark-mode #modeSwitch .fa-sun {
-  display: none; /* Hide sun icon in dark mode */
+  color: var(--text-color-light); 
+  display: inline-block;
+  /* display: none;
+   Hide sun icon in dark mode */
 }
 
 /* normal css with out dark or light mode */
