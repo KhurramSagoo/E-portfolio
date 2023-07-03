@@ -1,5 +1,160 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
+/* Default font color for light mode */
+.about-me__link {
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Font color for dark mode */
+  .about-me__link {
+    color: white;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Switch Button */
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.switch:before {
+  color: #000000;
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.switch:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* Fixing font color in dark mode for font-awesome icons */
+.dark-mode .about-me__link i {
+  color: white;
+}
+
+:root {
+  --text-color-dark: white;
+  --text-color-light: black;
+  --bg-color-dark: #333;
+  --image-color-dark: #fff; /* Dark mode image color */
+  --image-color-light: #000; /* Light mode image color */
+}
+/* .dark-mode .project__description--para {
+  color: var(--text-color-dark);
+}
+
+.light-mode .project__description--para {
+  color: var(--text-color-light);
+} */
+.dark-mode #languages,
+.dark-mode #languages * {
+  color: var(--text-color-dark);
+}
+
+.light-mode #languages,
+.light-mode #languages * {
+  color: var(--text-color-light);
+}
+.dark-mode .project__description,
+.dark-mode .project__description * {
+  color: var(--text-color-dark);
+}
+
+.light-mode .project__description,
+.light-mode .project__description * {
+  color: var(--text-color-light);
+}
+
+
+.dark-mode .footer__logo--img {
+  filter: invert(1); /* Invert the image in dark mode */
+  background-color: var(--image-color-dark);
+}
+
+.light-mode .footer__logo--img {
+  filter: invert(0); /* Reset the image in light mode */
+  background-color: var(--image-color-light);
+}
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.light-mode {
+  background-color: white;
+  color: var(--text-color-light);
+}
+/* Apply dark mode styles to the anchor */
+.dark-mode .footer__anchor {
+  color: var(--text-color-dark);
+}
+
+/* Apply light mode styles to the anchor */
+.light-mode .footer__anchor {
+  color: var(--text-color-light);
+}
+/* Apply dark mode styles to the section */
+.dark-mode #languages {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Apply light mode styles to the section */
+.light-mode #languages {
+  background-color: white;
+  color: var(--text-color-light);
+}
+.dark-mode .personal_logo,
+.dark-mode .nav__link a {
+  color: var(--text-color-dark);
+}
+
+.light-mode .personal_logo,
+.light-mode .nav__link a {
+  color: var(--text-color-light);
+}
+
+.light-mode #modeSwitch .fa-sun {
+  color: var(--text-color-dark);
+  display: none; /* Set sun icon color in light mode */
+}
+
+.light-mode #modeSwitch .fa-moon {
+  display: none; /* Hide moon icon in light mode */
+}
+
+.dark-mode #modeSwitch .fa-moon {
+  color: var(--text-color-light); /* Set moon icon color in dark mode */
+}
+
+.dark-mode #modeSwitch .fa-sun {
+  display: none; /* Hide sun icon in dark mode */
+}
+
+/* normal css with out dark or light mode */
+
 * {
   font-family: "Lato", sans-serif;
   padding: 0;
@@ -388,7 +543,7 @@ nav {
 .project__description--para,
 .project__description--link {
   text-align: left;
-  color: #f8f8f8;
+  color: black;
 }
 
 .project {
